@@ -23,7 +23,8 @@ We introduce two major changes to the existing network architecture:
 We combine these two changes to obtain **CenterFusion++**. <br>
 The following figure displays the modified network architecture on a high level:
 
-![CenterFusion++ Overview](./figures/CenterFusion_pp.png "CenterFusion++ Overview")
+![CenterFusion++ Overview](./figures/centerfusionpp_github_bright.png#gh-light-mode-only "CenterFusion++ Overview")
+![CenterFusion++ Overview](./figures/centerfusionpp_github_dark.png#gh-dark-mode-only "CenterFusion++ Overview")
 
 <!-- ## Results
 - #### Overall results: <!-- omit in toc --> 
@@ -41,8 +42,7 @@ The following figure displays the modified network architecture on a high level:
 
 <!-- <p align="center"> <img src='figures/qualitative_results.jpg' align="center"> </p>  -->
 
----
----
+
 ## Installation
 
 The code has been tested on Ubuntu 20.04 with Python 3.7.11, CUDA 11.3.1 and PyTorch 1.10.2. <br>
@@ -82,8 +82,6 @@ For installation, follow these steps:
 
 Additionally, the docker file to build a docker container with all the necessary packages is located [here](./experiments/Dockerfile).
 
----
----
 ## Dataset Preparation
 
 CenterFusion++ was trained and validated using the [nuScenes](https://www.nuscenes.org/nuscenes) dataset only. Previous work (e.g. [CenterTrack](https://github.com/xingyizhou/CenterTrack)) uses other dataset (e.g. KITTI etc.) as well. This is not implemented within CenterFusion++. However, the original files that can be used to convert these datasets into the correct dataformat are not removed from this repository.
@@ -132,8 +130,6 @@ To create the annotations, run the [convert_nuScenes.py](./src/tools/convert_nuS
   ```
 The script contains several settings that can be used. They are explained in the first block of the code.
 
----
----
 
 ## Pretrained Models
 The pre-trained models can be downloaded from the links given in the following table:
@@ -147,9 +143,6 @@ The pre-trained models can be downloaded from the links given in the following t
 
 - for the `CenterNet170` backbone, we refer to the [CenterFusion repository](https://github.com/mrnabati/CenterFusion#pretrained-models).
 
-
----
----
 ## Training
 
 ### Train on local machine
@@ -170,8 +163,6 @@ The script creates a log folder in
 where `<time_stamp>` is the time stamp and the default for `<exp_id>` is `centerfusionpp`. <br>
 The log folder contains an event file for Tensorboard, a `log.txt` with a brief summary of the training process and a `opt.txt` file containing the specified options. <br>
 
----
----
 ## Testing
 
 Download the pre-trained model into the `<CFPP_ROOT>/models` directory and use the `<CFPP_ROOT>/experiments/test.sh` script to run the evaluation:
@@ -183,8 +174,6 @@ Download the pre-trained model into the `<CFPP_ROOT>/models` directory and use t
 
 Make sure the `--load_model` parameter in the script provides the path to the downloaded pre-trained model. The `--val_split` parameter determines the validation set, which could be `mini_val`, `val` or `test`. You can modify the parameters in the script as needed, or add more supported parameters from `<CFPP_ROOT>/src/lib/opts.py`.
 
----
----
 ## References
 The following works have been used by CenterFusion++.
 
