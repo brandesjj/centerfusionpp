@@ -1,8 +1,6 @@
 # CenterFusion++ <!-- omit in toc --> 
-This repository contains the implementation of the Master's Thesis project <br>
-**Camera-Radar Sensor Fusion using Deep Learning**
-<br>
-from Johannes Kuebel and Julian Brandes.
+This repository contains the implementation of the Master's Thesis project 
+**Camera-Radar Sensor Fusion using Deep Learning** from Johannes Kübel and Julian Brandes.
 
 ----------------------------------------
 ## Contents <!-- omit in toc --> 
