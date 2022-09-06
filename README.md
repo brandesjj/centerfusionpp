@@ -2,6 +2,8 @@
 This repository contains the implementation of the Master's Thesis project 
 **Camera-Radar Sensor Fusion using Deep Learning** from Johannes Kübel and Julian Brandes.
 
+The thesis is available for download in the [Chalmers Open Digital Repository](https://hdl.handle.net/20.500.12380/305503).
+
 ----------------------------------------
 ## Contents <!-- omit in toc --> 
 - [Introduction](#introduction)
@@ -173,6 +175,19 @@ Download the pre-trained model into the `<CFPP_ROOT>/models` directory and use t
   ```
 
 Make sure the `--load_model` parameter in the script provides the path to the downloaded pre-trained model. The `--val_split` parameter determines the validation set, which could be `mini_val`, `val` or `test`. You can modify the parameters in the script as needed, or add more supported parameters from `<CFPP_ROOT>/src/lib/opts.py`.
+
+## Citation
+To reference to this work, please use the following:
+
+  ~~~
+  @mastersthesis{CenterFusionPP,
+  author = {K{\"u}bel, Johannes and Brandes, Julian},
+  title = {Camera-Radar Sensor Fusion using Deep Learning},
+  school = {Chalmers University of Technology},
+  year = 2022,
+  note = {Available: https://hdl.handle.net/20.500.12380/305503}}
+  ~~~
+
 
 ## References
 The following works have been used by CenterFusion++.
